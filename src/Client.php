@@ -428,7 +428,7 @@ class Client
      * @return mixed
      * @throws BearerTokenException|GuzzleException
      */
-    private function obtainBearerToken()
+    public function obtainBearerToken()
     {
         $request = $this->client->request(
             "POST",
