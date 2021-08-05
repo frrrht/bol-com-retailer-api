@@ -408,7 +408,7 @@ class Client
      *
      * @throws InvalidArgumentException|GuzzleException|BearerTokenException
      */
-    private function getBearerToken(): string
+    public function getBearerToken(): string
     {
         $this->bearerTokenLock = true;
 
@@ -428,7 +428,7 @@ class Client
      * @return mixed
      * @throws BearerTokenException|GuzzleException
      */
-    public function obtainBearerToken()
+    private function obtainBearerToken()
     {
         $request = $this->client->request(
             "POST",
